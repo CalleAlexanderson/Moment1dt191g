@@ -110,6 +110,12 @@ main div {
   padding: 5px;
 }
 
+/* Razor style */
+
+.courses {
+  list-style: "✅ ";
+  margin-left: 20px;
+}
 
 
 @media only screen and (min-width: 600px) {

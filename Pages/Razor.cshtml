@@ -2,9 +2,51 @@
 @model MyApp.Namespace.RazorModel
 @{
     ViewData["Title"] = "Razor";
+    @* Den dag det är idag på engelska *@
+    string day = @DateTime.Now.ToString("dddd");
 }
-
 <div>
     <h1 class="display-4">Razor</h1>
-    
+    <p><b>Information</b></p>
+
+    @* Skriver ut det datum och klockslag sidan laddas in *@
+    <p><b>Datum/Klockslag:</b>&nbsp; @DateTime.Now.ToString("yyyy/MM/dd") &nbsp; @DateTime.Now.ToString("HH:mm:ss")</p>
+
+    @* kollar om värdet på day är "Friday" *@
+    @if (day == "Friday")
+    {
+        <p>Idag är det fredag!</p>
+    }
+    else
+    {
+        <p>Idag är det inte fredag!</p>
+    }
+
+    @{
+        @* En array med alla kurser jag läst *@
+        string[] courses = ["DT057G, Webbutveckling I",
+    "dt084g, Introduktion till programmering i JavaScript",
+    "dt200g, Grafisk teknik för webb",
+    "dt068g, Webbanvändbarhet",
+    "dt003g, Databaser",
+    "dt211g, Frontend-baserad webbutveckling",
+    "dt207g, Backend-baserad webbutveckling",
+    "dt208g, Programmering i TypeScript",
+    "ik060g, Projektledning",
+    "dt071g, Programmering i C#.net",
+    "dt193g, Fullstacks-utveckling med ramverk",
+    "dt209g, Webbutveckling för WordPress"
+        ];
+
+        <p><b>Kurser jag läst:</b></p>
+        <ul class="courses">
+            @* skriver ut alla kurser jag läst som li *@
+            @foreach (var course in courses) 
+            {
+                <li>
+                    @course
+                </li>
+            }
+        </ul>
+    }
 </div>
