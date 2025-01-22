@@ -12,77 +12,11 @@ ul {
   padding: 0;
 }
 
-header {
-  background-color: cadetblue;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200px;
-}
-
 header .logo-link {
   display: block;
   margin: 16px auto;
   height: 100px;
   width: max-content;
-}
-
-header .logo {
-  height: 100%;
-  border: 1px solid black;
-  padding: 4px;
-  background-color: white;
-}
-
-header .today-date {
-  height: 40px;
-  border: 1px solid black;
-  background-color: white;
-  width: max-content;
-  margin: 20px auto;
-}
-
-header .today-date p {
-  margin: 4px;
-  font-size: 20px;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-}
-
-footer div {
-  width: 96vw;
-  padding: 4px;
-  margin: 10px auto;
-  text-align: center;
-  border: 1px solid black;
-  background-color: white;
-}
-
-footer div p {
-  margin: 2px;
-}
-
-aside {
-  margin-top: 200px;
-  background-color: white;
-}
-
-aside li:first-child {
-  border-top: 1px solid black;
-}
-
-aside li {
-  list-style: none;
-  border-bottom: 1px solid black;
-  padding: 5px;
-  font-size: 1.2rem;
 }
 
 aside a {
@@ -91,23 +25,6 @@ aside a {
   width: 100%;
   height: 100%;
   color: black;
-}
-
-aside li:hover {
-  background-color: #aacaca;
-  transition: 0.25s;
-}
-
-main {
-  background-color: white;
-  border: 1px solid black;
-  width: 95%;
-  margin: auto;
-  min-height: calc(100vh - 400px);
-}
-
-main div {
-  padding: 5px;
 }
 
 /* Razor style */
@@ -120,78 +37,9 @@ main div {
 
 @media only screen and (min-width: 600px) {
 
-  body {
-    overflow-y: hidden;
-  }
-
-  header {
-    height: 150px;
-  }
-
   header .logo-link {
     margin: 20px 2vw;
     height: calc(100% - 40px);
     width: 260px;
   }
-
-  header .today-date {
-    position: absolute;
-    right: 2vw;
-    top: 20px;
-    width: auto;
-    margin: auto;
-  }
-
-  .aside-main-div {
-    display: grid;
-    grid-template-columns: 250px auto;
-  }
-
-  aside,
-  main {
-    margin-top: 150px;
-  }
-
-  aside {
-    height: calc(100vh - 230px);
-    margin: 165px 2vw 0;
-    border: 1px solid black;
-  }
-
-  aside li {
-    width: 90%;
-    border: 1px solid black;
-    margin: 20px auto;
-  }
-
-  main {
-    height: calc(100vh - 230px);
-    margin: 165px 2vw auto 0;
-  }
-
-  main div {
-    padding: 10px;
-    height: 100%;
-    overflow-y: auto;
-  }
-
-}
-
-@media only screen and (min-width: 1024px) {
-  .aside-main-div {
-    display: grid;
-    grid-template-columns: 400px auto;
-  }
-
-}
-
-.form-floating>.form-control-plaintext::placeholder,
-.form-floating>.form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
-}
-
-.form-floating>.form-control-plaintext:focus::placeholder,
-.form-floating>.form-control:focus::placeholder {
-  text-align: start;
 }
